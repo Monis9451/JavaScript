@@ -28,4 +28,3 @@
 
 // let exp=a**b; //exponent
 // console.log("The exponent of ",a," power ",b,"is    :", exp);
-console.log(0/0);
