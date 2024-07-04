@@ -68,16 +68,22 @@
 // console.log(arr1.reverse())
 
 //printing all odd numners from 1 to 15 using loop
-for(let i=1;i<=15;i++)
-    {
-        if((i%2)!=0)
-            {
-                console.log(i)
-            }
-    }
-for(let i=1;i<=15;i+=2)
-    {
-        console.log(i)
-    }
+// for(let i=1;i<=15;i++)
+//     {
+//         if((i%2)!=0)
+//             {
+//                 console.log(i)
+//             }
+//     }
+// for(let i=1;i<=15;i+=2)
+//     {
+//         console.log(i)
+//     }
+
+// let intro = {
+//     name : "Monis hussain",
+//     age  : 18
+// }
+// console.log(intro)
 
 
