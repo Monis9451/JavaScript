@@ -30,10 +30,31 @@
 // num = prompt("Enter a number for its multiplication table: ")
 // multiplicationTable(num);
 
-let names = "monis"
-function changeName()
-{
-    names = "ali";
-}
-changeName();
-console.log(names);
+// let names = "monis"
+// function changeName()
+// {
+//     names = "ali";
+// }
+// changeName();
+// console.log(names);
+
+// function welcome()
+// {
+//     console.log("It will print after 5 seconds!")
+// }
+// setTimeout(welcome,5000)
+
+// let square = (n) => n*n
+// console.log(square(9))
+
+// function display()
+// {
+//     console.log("Hello world!")
+// }
+
+let id = setInterval(() => {
+    console.log("Hello World!")
+}, 2000);
+setTimeout( ()=> {
+    clearInterval(id);
+},10500)
