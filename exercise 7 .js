@@ -64,14 +64,15 @@
 // console.log(`This is the smallest value of the array: ${ans}`)
 
 //Finding the the smallest is arry using spread function.
-arr=[4,6,1,3,6,8,99,-3,34,562,21]
-function min (ar)
-{
-    return arr.reduce((R,E) => {
-        if(R>E)
-        {return E}
-        else{ return R}
-    } )
-}
-ans = min(...arr)
-console.log(ans)
+// arr=[4,6,1,3,6,8,99,-3,34,562,21]
+// function min (ar)
+// {
+//     return arr.reduce((R,E) => 
+//     {
+//         if(R>E)
+//         {return E}
+//         else{ return R}
+//     })
+// }
+// ans = min(...arr)
+// console.log(ans)
