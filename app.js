@@ -1,6 +1,6 @@
 let img = document.getElementsByClassName("oldImg");
 console.log(img);
-for(let i=0; i<img.length;i++)
+for (image of img)
 {
     console.log(img[i].src)
 }
