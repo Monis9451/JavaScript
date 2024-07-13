@@ -6,6 +6,8 @@ button.addEventListener("click",function()
 {
     let item = document.createElement("li")
     item.innerText = input.value
+    let delbtn = document.createElement("button")
+    delbtn.innerText = "Delete"
     ul.appendChild(item)
     input.value = ""
 })
