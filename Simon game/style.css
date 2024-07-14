@@ -1,0 +1,33 @@
+body{
+    text-align: center;
+}
+.inner_box{
+    height: 200px;
+    width: 200px;
+    border-radius: 20%;
+    border: 10px solid black;
+    margin: 0.6rem;
+}
+.btn_container1{
+    display: flex;
+    justify-content: center;
+}
+.btn_container2{
+    display: flex;
+    justify-content: center;
+}
+.box_1{
+    background-color: red;
+}
+.box_2{
+    background-color: blue;
+}
+.box_3{
+    background-color: green;
+}
+.box_4{
+    background-color: yellow;
+}
+.flash{
+    background-color: black;
+}
