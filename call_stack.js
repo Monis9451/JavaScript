@@ -18,7 +18,7 @@
 
 //Making a call  stack hell
 
-// h1 = document.querySelector("h1")
+h1 = document.querySelector("h1")
 // function colorChange(color, delay, newFunc){
 //     setTimeout(()=>{
 //         h1.style.color = color
@@ -71,32 +71,51 @@
 //     console.log("Promise was rejected")
 // })
 
-//Callback hell for color code
+// //Callback hell for color code
 
 
-h1 = document.querySelector("h1")
-function colorChange(color,delay){
-    return new Promise((success)=>{
+// h1 = document.querySelector("h1")
+// function colorChange(color,delay){
+//     return new Promise((success)=>{
+//         setTimeout(()=>{
+//             h1.style.color = color
+//             success("Color changed successfully")
+//         },delay)
+//     })
+// }
+
+// colorChange("red",1000)
+// .then(()=>{
+//     console.log("Text converted to red color")
+//     return colorChange("green",1000)
+// })
+// .then(()=>{
+//     console.log("Text converted to green color")
+//     return colorChange("lightblue",1000)
+// })
+// .then(()=>{
+//     console.log("Text converted to lightblue color")
+//     return colorChange("yellow",1000)
+// })
+// .then(()=>{
+//     console.log("Text converted to lightblue color")
+// })
+
+//practicing async and await function
+function colorChange1(color, delay){
+    return new Promise((resolve ,reject)=>{
         setTimeout(()=>{
             h1.style.color = color
-            success("Color changed successfully")
+            console.log(`Color changed to ${color}.`)
+            resolve("Color changed")
         },delay)
     })
 }
 
-colorChange("red",1000)
-.then(()=>{
-    console.log("Text converted to red color")
-    return colorChange("green",1000)
-})
-.then(()=>{
-    console.log("Text converted to green color")
-    return colorChange("lightblue",1000)
-})
-.then(()=>{
-    console.log("Text converted to lightblue color")
-    return colorChange("yellow",1000)
-})
-.then(()=>{
-    console.log("Text converted to lightblue color")
-})
+async function changing(){
+    await colorChange1("red",1000)
+    await colorChange1("blue",1000)
+    await colorChange1("green",1000)
+    colorChange1("yellow",1000)
+}
+changing()
