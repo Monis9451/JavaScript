@@ -106,6 +106,10 @@ function colorChange1(color, delay){
     return new Promise((resolve ,reject)=>{
         setTimeout(()=>{
             h1.style.color = color
+            let num = Math.floor(Math.random()*11)
+            if(num < 4){
+                reject("This color's number is less than 4")
+            }
             console.log(`Color changed to ${color}.`)
             resolve("Color changed")
         },delay)
@@ -113,9 +117,12 @@ function colorChange1(color, delay){
 }
 
 async function changing(){
-    await colorChange1("red",1000)
+    try {await colorChange1("red",1000)
     await colorChange1("blue",1000)
     await colorChange1("green",1000)
     colorChange1("yellow",1000)
+} catch(error){
+        console.log(`Error caught: ${error}`)
+    }
 }
 changing()
