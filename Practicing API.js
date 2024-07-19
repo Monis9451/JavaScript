@@ -1,4 +1,5 @@
 let url = "https://catfact.ninja/fact"
+let url2 = "https://dog.ceo/api/breeds/image/random"
 
 // fetch(url)
 // .then((res)=>{
@@ -55,5 +56,25 @@ try{
 catch(err){
     console.log(`Error - ${err}`)
     return console.log("No fact found")
+}
+}
+
+let btn2 = document.getElementById("dog")
+let image = document.querySelector("img")
+btn2.addEventListener("click", async()=>{
+    console.log("Button was clicked")
+    let img = await getImg()
+    console.log(img)
+    image.setAttribute("src", img)
+})
+
+async function getImg(){
+try{
+    let res = await axios.get(url2)
+    return res.data.message
+}
+catch(err){
+    console.log(`Error - ${err}`)
+    return console.log("No image found")
 }
 }
