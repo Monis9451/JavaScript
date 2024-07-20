@@ -78,3 +78,16 @@ catch(err){
     return console.log("No image found")
 }
 }
+
+//using headers in Axios
+const url3 = "https://icanhazdadjoke.com/"
+async function getJoke(){
+    try{
+        const config = {headers:{Accept:"application/json"}}
+        let res = await axios.get(url3, config)
+        console.log(res.data)
+    }
+    catch(err){
+        console.log(`ERROR - ${err}`)
+    }
+}
